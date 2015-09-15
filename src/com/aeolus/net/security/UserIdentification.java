@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 
 public final class UserIdentification {
 
+	private static String OS = System.getProperty("os.name").toLowerCase();
+
 	public static String getWMIValue(String wmiQueryStr, String wmiCommaSeparatedFieldName) throws Exception
 	{
 		String vbScript = getVBScript(wmiQueryStr, wmiCommaSeparatedFieldName);
@@ -77,12 +79,18 @@ public final class UserIdentification {
 
 	
 	public static String generateUID() throws Exception {
-		String serial = getWMIValue("SELECT SerialNumber FROM Win32_BIOS", "SerialNumber");
-		//serial = serial.replaceAll("[^\\d]", "");
-		String idate = getWMIValue("Select InstallDate from Win32_OperatingSystem", "InstallDate");
-		//idate = idate.replaceAll("[^\\d]", "");
-		return (serial.concat(idate));
-		
+		if( OS.contains( "win" ) )
+		{
+			String serial = getWMIValue( "SELECT SerialNumber FROM Win32_BIOS", "SerialNumber" );
+			//serial = serial.replaceAll("[^\\d]", "");
+			String idate = getWMIValue( "Select InstallDate from Win32_OperatingSystem", "InstallDate" );
+			//idate = idate.replaceAll("[^\\d]", "");
+			return ( serial.concat( idate ) );
+		}
+		else
+		{
+			return Math.random() * Long.MAX_VALUE  + "";
+		}
 	}
 	
 	public static final String CLASS_Win32_BIOS = "Win32_BIOS";

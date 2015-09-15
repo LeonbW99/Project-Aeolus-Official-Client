@@ -22,7 +22,7 @@ public final class SoundTrack {
 				return;
 			tracks[id] = new SoundTrack();
 			tracks[id].decode(stream);
-			delays[id] = tracks[id].calculateDelay();		
+			delays[id] = tracks[id].calculateDelay();
 		} while (true);
 	}
 

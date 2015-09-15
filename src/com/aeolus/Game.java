@@ -208,9 +208,10 @@ public class Game extends GameShell {
 
 	public void repackCacheIndex(int cacheIndex) {
 		System.out.println("Started repacking index " + cacheIndex + ".");
-		int indexLength = new File(indexLocation(cacheIndex, -1)).listFiles().length;
-		File[] file = new File(indexLocation(cacheIndex, -1)).listFiles();
+
 		try {
+			int indexLength = new File(indexLocation(cacheIndex, -1)).listFiles().length;
+			File[] file = new File(indexLocation(cacheIndex, -1)).listFiles();
 			for (int index = 0; index < indexLength; index++) {
 				int fileIndex = Integer
 						.parseInt(getFileNameWithoutExtension(file[index]
@@ -8726,7 +8727,7 @@ public class Game extends GameShell {
 			// musics();
 
 			File[] file = new File(Signlink.findcachedir()
-					+ "/sprites/sprites/").listFiles();
+					+ "/Sprites/Sprites/").listFiles();
 			int size = file.length;
 			cacheSprite = new Sprite[size];
 			System.out.println("Images Loaded: " + size);
@@ -9595,6 +9596,8 @@ public class Game extends GameShell {
 		if (rsInterface.hoverOnly && anInt1026 != rsInterface.id
 				&& anInt1048 != rsInterface.id && anInt1039 != rsInterface.id)
 			return;
+
+
 		int clipLeft = Raster.topX;
 		int clipTop = Raster.topY;
 		int clipRight = Raster.bottomX;

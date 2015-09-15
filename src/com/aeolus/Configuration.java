@@ -64,8 +64,8 @@ public class Configuration {
 	 * Index 3 = Sounds/Music
 	 * Index 4 = Maps
 	 */
-	public static boolean repackIndexOne = false, repackIndexTwo = false,
-			repackIndexThree = false, repackIndexFour = false;
+	public static boolean repackIndexOne = true, repackIndexTwo = true,
+			repackIndexThree = true, repackIndexFour = true;
 
 	/**
 	 * Dump Indexes
@@ -74,8 +74,8 @@ public class Configuration {
 	 * Index 3 = Sounds/Music
 	 * Index 4 = Maps
 	 */
-	public static boolean dumpIndexOne = false, dumpIndexTwo = false,
-			dumpIndexThree = false, dumpIndexFour = false;
+	public static boolean dumpIndexOne = true, dumpIndexTwo = true,
+			dumpIndexThree = true, dumpIndexFour = true;
 	
 	/**
 	 * Shows the ids of items, objects, and npcs on right click
@@ -106,12 +106,12 @@ public class Configuration {
 	/**
 	 * Enables the use of run energy
 	 */
-	public static boolean runEnergy = true;
+	public static boolean runEnergy = false;
 	
 	/**
 	 * Displays health above entities heads
 	 */
-	public static boolean hpAboveHeads = false;
+	public static boolean hpAboveHeads = true;
 	
 	/**
 	 * Displays names above entities
@@ -126,16 +126,16 @@ public class Configuration {
 	/**
 	 * Enables/Disables Revision 554 hitmarks
 	 */
-	public static boolean hitmarks554 = false;
+	public static boolean hitmarks554 = true;
 	
 	/**
 	 * Enables/Disables Revision 554 health bar
 	 */
-	public static boolean hpBar554 = false;
+	public static boolean hpBar554 = true;
 	
 	/**
 	 * Enables the HUD to display 10 X the amount of hitpoints
 	 */
-	public static boolean tenXHp = false;
+	public static boolean tenXHp = true;
 
 }
