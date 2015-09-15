@@ -8726,7 +8726,7 @@ public class Game extends GameShell {
 			// musics();
 
 			File[] file = new File(Signlink.findcachedir()
-					+ "/sprites/sprites/").listFiles();
+					+ "/Sprites/Sprites/").listFiles();
 			int size = file.length;
 			cacheSprite = new Sprite[size];
 			System.out.println("Images Loaded: " + size);
